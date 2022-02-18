@@ -34,3 +34,8 @@ color: #1abc9c !important;;
 .navbar-right{
   text-align: right;
 }
+
+.homeImg{
+  width: 100%;
+  height: auto;
+}
