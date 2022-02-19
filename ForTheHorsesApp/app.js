@@ -32,7 +32,7 @@ app.use('/userLogin', userLoginRouter);
 app.use('/orgLogin', orgLoginRouter);
 app.use('/about', aboutRouter);
 app.use('/contact', contactRouter);
-app.use('/browse', browseRouter);
+//app.use('/browse', browseRouter);
 app.use('/orgRegister', orgRegisterRouter);
 app.use('/userRegister', userRegisterRouter);
 app.use('/pets', petsRouter);
