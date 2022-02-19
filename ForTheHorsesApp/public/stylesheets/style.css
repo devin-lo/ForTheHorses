@@ -197,3 +197,18 @@ input[type=submit]:hover {
   height: 90%;
   float: center;
 }
+
+/* https://www.w3schools.com/howto/howto_css_placeholder.asp */
+
+.input_Search::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #AAAAAA;
+  opacity: 1; /* Firefox */
+}
+
+.input_Search:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #AAAAAA;
+}
+
+.input_Search::-ms-input-placeholder { /* Microsoft Edge */
+  color: #AAAAAA;
+}
