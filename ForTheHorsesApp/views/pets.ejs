@@ -6,7 +6,15 @@
 <% include partials/script %>
 </head>
 <body>
-<<<<<<< HEAD:ForTheHorsesApp/views/browse.ejs
+  <div id="debug"></div>
+  <script>
+    fetch("pets1.json")
+    .then(resposne=>resposne.json())
+    .then(data=>{
+      console.log(data.sentence)
+      document.querySelector("#debug").innerText = data.sentence
+    })
+  </script>
     <div class="container">
         <form id="pet-form">
           <div class="form-group">
@@ -19,10 +27,8 @@
             <input type="submit" value="Find" class="btn btn-dark btn-lg btn-block mt-3"> 
           </div>
         </form>
-=======
     browse page
     <div id="results"></div>
->>>>>>> a106f2a670ed9cb2c422f7f75294bdb761ce14ad:ForTheHorsesApp/views/pets.ejs
 </body>
 <% include partials/script %>
 </html>
