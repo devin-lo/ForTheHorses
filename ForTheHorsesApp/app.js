@@ -15,6 +15,7 @@ var orgRegisterRouter = require('./routes/orgRegister');
 var userRegisterRouter = require('./routes/userRegister');
 var petProfileRouter = require('./routes/pet_profile');
 var orgDashRouter = require('./routes/orgDashboard');
+var addPetRouter = require('./routes/addPet');
 
 var app = express();
 
@@ -40,6 +41,7 @@ app.use('/userRegister', userRegisterRouter);
 app.use('/pets', petsRouter);
 app.use('/pet_profile', petProfileRouter);
 app.use('/orgDashboard', orgDashRouter);
+app.use('/addPet', addPetRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
