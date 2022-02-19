@@ -1,4 +1,5 @@
 body {
+  
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -39,29 +40,19 @@ color: #1abc9c !important;;
   width: 25%;
   height:25%;
 }
-#inputSearch{
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Roboto Condensed', sans-serif;
-  
-margin: 0;
-padding: 0;
-height: 50px;
-box-sizing: border-box;
-width: 300px;
-background-color: #dec0fc;
-}
 .Wrapper{
   min-height: 2vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .Search_box{
   background: #643fef;
   position: relative;
-  padding: 50px;
+  padding: 30px;
   border-radius: 50px;
   display: flex;
-  height: 50px;
+  height: 25px;
 }
 .Search_box .Search_btn{
   width: 50px;
@@ -74,8 +65,9 @@ background-color: #dec0fc;
   color: #fff;
   margin-right: 15px;
   cursor: pointer;
+ 
 }
-.Search_box .inputSearch{
+.Search_box .input_Search{
   outline: none;
   border: 0;
   background: #7a5cf0;
@@ -85,6 +77,7 @@ background-color: #dec0fc;
   height: 50px;
   border-radius: 50px;
 }
+
 
 .petIcon{
   width: 25%;
