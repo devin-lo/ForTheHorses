@@ -97,3 +97,75 @@ background-color: #dec0fc;
 #site_logo{
   width: 35%
 }
+
+#aboutHeader{
+  text-align: left;
+}
+
+#aboutInfo{
+  text-align: left;
+  font-size: x-large;
+}
+
+#WhatWeDoHeader{
+  text-align: left;
+}
+
+#WhatWeDoInfo{
+  text-align: left;
+  font-size: x-large;
+}
+
+.aboutLeftColumn {
+  float: left;
+  width: 50%;
+  padding: 8%;
+}
+
+.aboutRightColumn {
+  float: right;
+  width: 50%;
+  height: 10%;
+  padding-top: 10%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.aboutImg{
+  width: 70%;
+  height: 70%;
+  float: center;
+}
+
+.WhatWeDoLeftColumn {
+  float: left;
+  width: 50%;
+  height: 10%;
+  padding-top: 10%
+}
+
+.WhatWeDoRightColumn {
+  float: right;
+  width: 50%;
+  padding-top: 15%;
+  padding-right: 15%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.WhatWeDoImg{
+  width: 85%;
+  height: 90%;
+  float: center;
+}
