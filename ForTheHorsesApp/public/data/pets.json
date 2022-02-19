@@ -50,12 +50,63 @@
       ,
       "phone": "416-115-2011",
       "email": "test2@yorku.ca"
-    }
-  ,
-  "organization_id": 25413231,
-  "photos": [
-    "https://learnwebcode.github.io/json-example/images/dog-1.jpg"
-  ]
-}
+     },
+     "organization_id": 25413231,
+     "photos": [
+     "https://learnwebcode.github.io/json-example/images/dog-1.jpg"
+     ]
+   },
+   {
+    "name": "Whiskers",
+    "species": "Cat",
+    "breeds":
+      {
+        "primary": "Van Cat"
+      }
+    ,
+    "age": 13,
+    "contact" :
+                  {
+      "address":
+        {
+          "city": "Ottawa",
+          "zip": "K1A 0B1",
+          "state": "Ontario"
+        }
+      ,
+      "phone": "416-112-3101",
+      "email": "test3@yorku.ca"
+     },
+     "organization_id": 2551666841,
+     "photos": [
+     "https://upload.wikimedia.org/wikipedia/commons/b/b1/VAN_CAT.png"
+     ]
+   },
+   {
+    "name": "Spot",
+    "species": "Dog",
+    "breeds":
+      {
+        "primary": "Bulldog"
+      }
+    ,
+    "age": 2,
+    "contact" :
+                  {
+      "address":
+        {
+          "city": "Hamilton",
+          "zip": "L0R 0A5",
+          "state": "Ontario"
+        }
+      ,
+      "phone": "416-112-3101",
+      "email": "test3@yorku.ca"
+     },
+     "organization_id": 2551666841,
+     "photos": [
+     "https://www.akc.org/wp-content/uploads/2017/11/Doberman-Pinscher-standing-outdoors.jpg"
+     ]
+   }
 ]
 }
