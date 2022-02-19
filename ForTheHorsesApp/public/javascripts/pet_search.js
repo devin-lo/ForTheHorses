@@ -18,6 +18,8 @@ function readStuff(){
           for(var key in items.pets){
             console.log(key);
             output += "<li>" + items.pets[key].name + "</li>";
+            output += "<li>" + items.pets[key].species + "</li>";
+            output += "<img src=\"" + items.pets[key].photos[0] + "\">";
           }
           output += "</ul>";
           document.getElementById("update").innerHTML = output;
