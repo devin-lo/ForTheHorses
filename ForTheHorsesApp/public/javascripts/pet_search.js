@@ -9,13 +9,19 @@ function readStuff(){
   }
   
   request.overrideMimeType("application/json");
-  request.open("GET", 'data/pets.json', true);
+  if (reqType === "Cat") {
+    request.open("GET", 'data/cats.json', true);
+  }
+  else {
+    request.open("GET", 'data/dogs.json', true);
+  }
   request.onreadystatechange = function() {
     if (request.readyState === 4 && request.status == "200") {
       var items = JSON.parse(request.responseText);
           console.log(items);
           var output = "<ul>";
           for(var key in items.pets){
+            // should call function formatEntry w/ parameter items.pets[key] to put the thing on the page
             console.log(key);
             output += "<li>" + items.pets[key].name + "</li>";
             output += "<li>" + items.pets[key].species + "</li>";
