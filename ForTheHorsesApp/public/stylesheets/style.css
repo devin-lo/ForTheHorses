@@ -43,3 +43,7 @@ color: #1abc9c !important;;
 .petIcon{
   width: 25%;
 }
+
+#attribution{
+  text-align:center;
+}
