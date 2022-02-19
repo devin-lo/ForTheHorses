@@ -4,10 +4,24 @@
  <% include partials/head %>
  <% include partials/menu %>
 <% include partials/script %>
+<link rel="stylesheet" href="./stylesheets/orgDashboard.css">
 </head>
 <body>
     Organization Dashboard. You come here after you login. <br />
     You can see your currently listed pets (like see if ppl are tryna request to adopt). <br />
     Then you can also add additional pets, or remove pets.
+    <div class="listings">
+        <h3>Your Listings</h3>
+        <div class="results"></div> <!-- might need to rename it LATER -->
+        <div class="buttons_group">
+            <div class="listing_bt" id="add_pet"></div>
+            <div class="listing_bt" id="edit_pet"></div>
+            <div class="listing_bt" id="remove_pet"></div>
+        </div>
+    </div>
+    <div class="orgProfile">
+        <h3>Organization Profile</h3><a>Edit</a> <!-- don't know how to put the Edit at the right idk -->
+        <div class="orgProfileInfo"></div>
+    </div>
 </body>
 </html>
