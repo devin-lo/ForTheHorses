@@ -1,3 +1,7 @@
 #testCSS{
     font-size: x-large;
 }
+
+.orgBox {
+    border-style: solid;
+  }
