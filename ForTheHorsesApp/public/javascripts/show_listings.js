@@ -1,49 +1,56 @@
 //  https://stackoverflow.com/a/34579496
 
 function readListings(pgSrc){
+    // https://www.sitepoint.com/get-url-parameters-with-javascript
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    if (pgSrc !== 2 || urlParams.has('animal'))
+    {
+        var petType = document.getElementById("animal");
+        if (urlParams.has('animal'))
+            petType.value = urlParams.get('animal');
+        if(window.XMLHttpRequest){
+        request = new XMLHttpRequest();
+        }
+        else {
+        request = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        
+        request.overrideMimeType("application/json");
+        request.open("GET", 'data/pets.json', true);
+        request.onreadystatechange = function() {
+        if (request.readyState === 4 && request.status == "200") {
+            const results = document.querySelector("#listings"); // need to put a corresponding div #results somewhere
     
-    if(window.XMLHttpRequest){
-      request = new XMLHttpRequest();
-    }
-    else {
-      request = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    
-    request.overrideMimeType("application/json");
-    request.open("GET", 'data/pets.json', true);
-    request.onreadystatechange = function() {
-      if (request.readyState === 4 && request.status == "200") {
-        const results = document.querySelector("#listings"); // need to put a corresponding div #results somewhere
-  
-        // clear results first
-        results.innerHTML = "";
+            // clear results first
+            results.innerHTML = "";
 
-        var items = JSON.parse(request.responseText);
-            console.log(items);
-            // var output = "<ul>";
-            for(var key in items.pets){
-              // should call function formatEntry w/ parameter items.pets[key] to put the thing on the page
-              console.log(items.pets[key]);
-              if (pgSrc === 1)
-                formatEntry(items.pets[key]);
-              else {
-                    var petType = document.getElementById("animal");
-                    var reqType = petType.options[petType.selectedIndex].value;
-                    if (items.pets[key].species === reqType)
-                        formatEntry(items.pets[key]);
-              }
+            var items = JSON.parse(request.responseText);
+                console.log(items);
+                // var output = "<ul>";
+                for(var key in items.pets){
+                // should call function formatEntry w/ parameter items.pets[key] to put the thing on the page
+                console.log(items.pets[key]);
+                if (pgSrc === 1)
+                    formatEntry(items.pets[key]);
+                else {
+                        var reqType = petType.options[petType.selectedIndex].value;
+                        if (items.pets[key].species === reqType)
+                            formatEntry(items.pets[key]);
+                }
 
-              /*
-              output += "<li>" + items.pets[key].name + "</li>";
-              output += "<li>" + items.pets[key].species + "</li>";
-              output += "<img src=\"" + items.pets[key].photos[0] + "\">";
-              */
-            }
-            // output += "</ul>";
-            // document.getElementById("org_listings").innerHTML = output;
-      }
+                /*
+                output += "<li>" + items.pets[key].name + "</li>";
+                output += "<li>" + items.pets[key].species + "</li>";
+                output += "<img src=\"" + items.pets[key].photos[0] + "\">";
+                */
+                }
+                // output += "</ul>";
+                // document.getElementById("org_listings").innerHTML = output;
+        }
+        }
+        request.send(null);
     }
-    request.send(null);
   }
   
   // pets is the data
@@ -81,7 +88,7 @@ function readListings(pgSrc){
           
           </div>
           <div class="col-sm-6">
-          <img class="img-fluid rounded-circle mt-2 img-25" src="${
+          <img class="img-fluid rounded-circle mt-2 img-rz" src="${
             pet.photos[0] ? pet.photos[0] : "" // what is .medium ???? do we need that?????
           }">
           </div>

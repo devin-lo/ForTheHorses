@@ -4,9 +4,10 @@
  <% include partials/head %>
  <% include partials/menu %>
  <script type="text/javascript" src="javascripts/show_listings.js"></script>
+ <link rel="stylesheet" href="./stylesheets/pet_search.css">
 <% include partials/script %>
 </head>
-<body>
+<body onload="readListings(2)">
   
   <h2>Search for a Potential Pet</h2>
   <p id="'pets1"></p>
@@ -16,6 +17,7 @@
           <div class="form-group">
             <label for="animal">What type of animal are you searching for?</label>
             <select id="animal" class="form-control form-control-lg mb-3">
+              <option disabled selected value> -- Select an option -- </option> <!-- https://stackoverflow.com/a/23638053 -->
               <option value="Cat">Cat</option>
               <option value="Dog">Dog</option>
             </select>
@@ -23,8 +25,6 @@
               <div id="listings"></div>
           </div>
         </form>
-    browse page
-    <div id="results"></div>
 </body>
 <% include partials/script %>
 </html>
