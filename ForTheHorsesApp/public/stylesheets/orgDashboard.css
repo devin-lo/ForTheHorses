@@ -23,6 +23,10 @@
     background: red;
   }
 
+  #view_pet{
+    background: lightskyblue;
+  }
+
   .bocksHeader{
       float:left;
       font-size:175%;
