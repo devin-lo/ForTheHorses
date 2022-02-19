@@ -1,0 +1,57 @@
+{
+  "pets": [
+    {
+      "name" : "Purrsloud",
+      "species" : "Cat",
+      "breeds" : [
+                 {
+                 "primary" : "Siamese",
+                 "secondary" : "Sealpoint"
+                 }
+                 ],
+      "age" : 3,
+      "contact" " [
+                  {
+                  "address" : [
+                              {
+                              "city" : "Toronto",
+                              "zip" : "M2H 2A4",
+                              "state" : "Ontario"
+                              }
+                              ],
+                  "phone" : "416-310-3311",
+                  "email" : "test@yorku.ca"
+                  }
+                  ],
+      "organization_id" : 13545132165632,
+      "photos" : ["https://learnwebcode.github.io/json-example/images/cat-2.jpg",
+                  "https://learnwebcode.github.io/json-example/images/cat-2.jpg"]
+    },
+    {
+      "name" : "Barksalot",
+      "species" : "Dog",
+      "breeds" : [
+                 {
+                 "primary" : "Golden Retriever",
+                 "secondary" : "Labrador"
+                 }
+                 ],
+      "age" : 5,
+      "contact" " [
+                  {
+                  "address" : [
+                              {
+                              "city" : "Toronto",
+                              "zip" : "M1W 3X9",
+                              "state" : "Ontario"
+                              }
+                              ],
+                  "phone" : "416-115-2011",
+                  "email" : "test2@yorku.ca"
+                  }
+                  ],
+      "organization_id" : 25413231,
+      "photos" : ["https://learnwebcode.github.io/json-example/images/dog-1.jpg"]
+    }
+  ]
+}
