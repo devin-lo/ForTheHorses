@@ -15,8 +15,9 @@ function readStuff(){
       var items = JSON.parse(request.responseText);
           console.log(items);
           var output = "<ul>";
-          for(var key in items){
-            output += "<li>" + items[key].bio + "</li>";
+          for(var key in items.pets){
+            console.log(key);
+            output += "<li>" + items.pets[key].name + "</li>";
           }
           output += "</ul>";
           document.getElementById("update").innerHTML = output;
