@@ -8,7 +8,7 @@ function readListings(pgSrc){
     if (pgSrc !== 2 || urlParams.has('animal'))
     {
         var petType = document.getElementById("animal");
-        if (urlParams.has('animal'))
+        if (pgSrc === 2 && urlParams.has('animal'))
             petType.value = urlParams.get('animal');
         if(window.XMLHttpRequest){
         request = new XMLHttpRequest();
