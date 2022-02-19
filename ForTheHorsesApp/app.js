@@ -13,6 +13,8 @@ var userLoginRouter = require('./routes/userLogin');
 var orgLoginRouter = require('./routes/orgLogin');
 var orgRegisterRouter = require('./routes/orgRegister');
 var userRegisterRouter = require('./routes/userRegister');
+var petProfileRouter = require('./routes/pet_profile');
+var orgDashRouter = require('./routes/orgDashboard');
 
 var app = express();
 
@@ -36,6 +38,8 @@ app.use('/contact', contactRouter);
 app.use('/orgRegister', orgRegisterRouter);
 app.use('/userRegister', userRegisterRouter);
 app.use('/pets', petsRouter);
+app.use('/pet_profile', petProfileRouter);
+app.use('/orgDashboard', orgDashRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
