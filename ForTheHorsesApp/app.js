@@ -11,6 +11,8 @@ var browseRouter = require('./routes/browse');
 var usersRouter = require('./routes/users');
 var userLoginRouter = require('./routes/userLogin');
 var orgLoginRouter = require('./routes/orgLogin');
+var orgRegisterRouter = require('./routes/orgRegister');
+var userRegisterRouter = require('./routes/userRegister');
 
 var app = express();
 
@@ -31,6 +33,8 @@ app.use('/orgLogin', orgLoginRouter);
 app.use('/about', aboutRouter);
 app.use('/contact', contactRouter);
 app.use('/browse', browseRouter);
+app.use('/orgRegister', orgRegisterRouter);
+app.use('/userRegister', userRegisterRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
