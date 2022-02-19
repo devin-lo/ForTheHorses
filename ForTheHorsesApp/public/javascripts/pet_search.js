@@ -9,12 +9,15 @@ function readStuff(){
   }
   
   request.overrideMimeType("application/json");
+  request.open("GET", 'data/pets.json', true);
+  /* TO-DO: maybe split cats and dogs? or else when you go thru the entries later below in the anon function, only list out Cats or Dogs idk
   if (reqType === "Cat") {
     request.open("GET", 'data/cats.json', true);
   }
   else {
     request.open("GET", 'data/dogs.json', true);
   }
+  */
   request.onreadystatechange = function() {
     if (request.readyState === 4 && request.status == "200") {
       var items = JSON.parse(request.responseText);
