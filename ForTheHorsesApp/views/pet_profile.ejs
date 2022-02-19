@@ -6,6 +6,37 @@
 <% include partials/script %>
 </head>
 <body>
-    Pet Profile page. This needs to pull more details than the pets.ejs page does, based on the ID used
+    <!-- Pet Profile page. This needs to pull more details than the pets.ejs page does, based on the pet ID used -->
+    <!-- the pet's name and species needs to be pulled from the JSON -->
+    <h3 id="pet_specific_name"></h3>
+    <h4 id="pet_specific_species"></h4>
+    <table class="pet_info">
+        <tr><td class="text-center"><b>Where Am I?</b></td></tr>
+        <tr>
+            <td>Shelter</td><td id="pet_spec_shelter_name"></td> <!-- look-up based on the org ID from JSON -->
+        </tr>
+        <tr>
+            <td>Location</td><td id="pet_spec_location"></td> <!-- parse based on contact city, state, zip -->
+        </tr>
+        <tr>
+            <td>Contact Phone</td><td id="pet_spec_phone"></td>
+        </tr>
+        <tr>
+            <td>Contact Email</td><td id="pet_spec_email"></td>
+        </tr>
+        <tr><td class="text-center"><b>About Me!</b></td></tr>
+        <tr>
+            <td>Breeds </td><td id="pet_spec_breeds"></td> <!-- should be parsed based on breeds -->
+        </tr>
+        <tr>
+            <td>Age</td><td id="pet_spec_age"></td>
+        </tr>
+        <tr>
+            <td>Foods Liked</td><td id="pet_spec_food_like"></td>
+        </tr>
+        <tr>
+            <td>Foods Disliked</td><td id="pet_spec_food_dislike"></td>
+        </tr>
+    </table>
 </body>
 </html>

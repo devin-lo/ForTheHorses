@@ -1,13 +1,48 @@
-('button.load').onclick = function(){
-    var request;
+//  https://stackoverflow.com/a/34579496
+
+function readStuff(){
+  if(window.XMLHttpRequest){
+    request = new XMLHttpRequest();
+  }
+  else {
+    request = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+  request.overrideMimeType("application/json");
+  request.open("GET", 'data/pets.json', true);
+  request.onreadystatechange = function() {
+    if (request.readyState === 4 && request.status == "200") {
+      var items = JSON.parse(request.responseText);
+          console.log(items);
+          var output = "<ul>";
+          for(var key in items.pets){
+            console.log(key);
+            output += "<li>" + items.pets[key].name + "</li>";
+          }
+          output += "</ul>";
+          document.getElementById("update").innerHTML = output;
+    }
+  }
+  request.send(null);
+}
+  /*
+  var request;
     if(window.XMLHttpRequest){
       request = new XMLHttpRequest();
     }
     else {
       request = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    request.open('GET', 'pets1.json');
+    
+    request.open('GET', "data/pets.json");
+    console.log(request.readyState);
+    console.log(request.status);
+
+    var items_test = JSON.parse(request.responseText);
+    console.log(items_test);
+
     request.onreadystagechange = function(){
+
       
         if((request.readyState === 4)&&(request.status === 200)){
           var items = JSON.parse(request.responseText);
@@ -21,7 +56,6 @@
         };
          request.send();
     }
-  }
 
   /*
 I don't know where this is supposed to go
