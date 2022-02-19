@@ -107,6 +107,58 @@
      "photos": [
      "https://www.akc.org/wp-content/uploads/2017/11/Doberman-Pinscher-standing-outdoors.jpg"
      ]
-   }
+   },
+   {
+    "name": "Chippy",
+    "species": "Bird",
+    "breeds":
+      {
+        "primary": "Parrot"
+      }
+    ,
+    "age": 8,
+    "contact" :
+                  {
+      "address":
+        {
+          "city": "Thunder Bay",
+          "zip": "P7A 0E8",
+          "state": "Ontario"
+        }
+      ,
+      "phone": "807-112-3101",
+      "email": "test4@yorku.ca"
+     },
+     "organization_id": 925526512841,
+     "photos": [
+     "https://www.earthlife.net/wp-content/uploads/albatross1.jpg"
+     ]
+    },
+    {
+      "name": "C+",
+      "species": "Fish",
+      "breeds":
+        {
+          "primary": "Sea Bass"
+        }
+      ,
+      "age": 1,
+      "contact" :
+                    {
+        "address":
+          {
+            "city": "Halifax",
+            "zip": "B3H 0A6",
+            "state": "Nova Scotia"
+          }
+        ,
+        "phone": "782-162-5909",
+        "email": "test43@yorku.ca"
+       },
+       "organization_id": 511632857465,
+       "photos": [
+       "https://i.kinja-img.com/gawker-media/image/upload/t_ku-large/k3cm8o2ohfiu8uumcti7.jpg"
+       ]
+      }
 ]
 }

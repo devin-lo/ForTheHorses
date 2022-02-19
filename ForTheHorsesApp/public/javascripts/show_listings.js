@@ -1,7 +1,8 @@
-//  https://stackoverflow.com/a/34579496
+//  https://stackoverflow.com/a/34579496 <- used this code to read the JSONs
 
 function readListings(pgSrc){
     // https://www.sitepoint.com/get-url-parameters-with-javascript
+    // ^ this allows the search page to be accessed from the home page using the animal icons
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     if (pgSrc !== 2 || urlParams.has('animal'))
@@ -37,6 +38,8 @@ function readListings(pgSrc){
                         var reqType = petType.options[petType.selectedIndex].value;
                         if (items.pets[key].species === reqType)
                             formatEntry(items.pets[key]);
+                        else if (reqType === "Other" && items.pets[key].species !== "Dog" && items.pets[key].species !== "Cat")
+                            formatEntry(items.pets[key]);
                 }
 
                 /*
@@ -55,7 +58,7 @@ function readListings(pgSrc){
   
   // pets is the data
   
-  // Full credit to Brad Traversy.
+  // Credit to Brad Traversy for this code, which constructs a div element for each listing in the JSON
   // https://github.com/bradtraversy/find_a_pet/blob/master/js/main.js
   
   function formatEntry(pet) {
