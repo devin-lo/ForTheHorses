@@ -6,15 +6,10 @@
 <% include partials/script %>
 </head>
 <body>
-  <div id="debug"></div>
-  <script>
-    fetch("pets1.json")
-    .then(resposne=>resposne.json())
-    .then(data=>{
-      console.log(data.sentence)
-      document.querySelector("#debug").innerText = data.sentence
-    })
-  </script>
+  
+  <h2>JSON Data</h2>
+  <p id="'pets1"></p>
+  
     <div class="container">
         <form id="pet-form">
           <div class="form-group">
@@ -25,6 +20,10 @@
             </select>
             
             <input type="submit" value="Find" class="btn btn-dark btn-lg btn-block mt-3"> 
+            <p>Click to load></p>
+            <script type="text/javascript" src="pets.js"></script>
+              <button id="load">Find Animals</button>
+              <div id="update"></div>
           </div>
         </form>
     browse page
