@@ -3,7 +3,7 @@
 <head>
  <% include partials/head %>
  <% include partials/menu %>
- <script type="text/javascript" src="javascripts/pet_search.js"></script>
+ <script type="text/javascript" src="javascripts/show_listings.js"></script>
 <% include partials/script %>
 </head>
 <body>
@@ -19,8 +19,8 @@
               <option value="Cat">Cat</option>
               <option value="Dog">Dog</option>
             </select>
-              <button id="load" type="button" onclick="readListings()">Find Animals</button>
-              <div id="update"></div>
+              <button id="load" type="button" onclick="readListings(0)">Find Animals</button>
+              <div id="listings"></div>
           </div>
         </form>
     browse page

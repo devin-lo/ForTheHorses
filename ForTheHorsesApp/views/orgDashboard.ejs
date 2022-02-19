@@ -5,10 +5,10 @@
  <% include partials/menu %>
 <% include partials/script %>
 <link rel="stylesheet" href="./stylesheets/orgDashboard.css">
-<script type="text/javascript" src="javascripts/orgDash_listings.js"></script>
+<script type="text/javascript" src="javascripts/show_listings.js"></script>
 <!-- probably needs its own js file for fetching based on the organization ID -->
 </head>
-<body onload="readListingsAll()">
+<body onload="readListings(1)">
    <!-- Organization Dashboard. You come here after you login. <br />
     You can see your currently listed pets (like see if ppl are tryna request to adopt). <br />
     Then you can also add additional pets, or remove pets. <br /> -->
@@ -16,7 +16,7 @@
     <div class="dashboard">
         <div class="bocks listings">
             <p class="bocksHeader">Your Listings</p><br />
-            <div class="results" id="org_listings"></div> <!-- might need to rename it LATER -->
+            <div class="results" id="listings"></div> <!-- might need to rename it LATER -->
             <br />
             <div class="buttons_group">
                 <!-- the first 3 buttons should be greyed out and not able to be selected if no pet is selected -->

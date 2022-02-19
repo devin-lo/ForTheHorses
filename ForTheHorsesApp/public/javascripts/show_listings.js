@@ -1,6 +1,7 @@
 //  https://stackoverflow.com/a/34579496
 
-function readListingsAll(){
+function readListings(pgSrc){
+    
     if(window.XMLHttpRequest){
       request = new XMLHttpRequest();
     }
@@ -12,7 +13,7 @@ function readListingsAll(){
     request.open("GET", 'data/pets.json', true);
     request.onreadystatechange = function() {
       if (request.readyState === 4 && request.status == "200") {
-        const results = document.querySelector("#org_listings"); // need to put a corresponding div #results somewhere
+        const results = document.querySelector("#listings"); // need to put a corresponding div #results somewhere
   
         // clear results first
         results.innerHTML = "";
@@ -23,7 +24,14 @@ function readListingsAll(){
             for(var key in items.pets){
               // should call function formatEntry w/ parameter items.pets[key] to put the thing on the page
               console.log(items.pets[key]);
-              formatEntry(items.pets[key]);
+              if (pgSrc === 1)
+                formatEntry(items.pets[key]);
+              else {
+                    var petType = document.getElementById("animal");
+                    var reqType = petType.options[petType.selectedIndex].value;
+                    if (items.pets[key].species === reqType)
+                        formatEntry(items.pets[key]);
+              }
 
               /*
               output += "<li>" + items.pets[key].name + "</li>";
@@ -44,7 +52,7 @@ function readListingsAll(){
   // https://github.com/bradtraversy/find_a_pet/blob/master/js/main.js
   
   function formatEntry(pet) {
-    const results = document.querySelector("#org_listings"); // need to put a corresponding div #results somewhere
+    const results = document.querySelector("#listings"); // need to put a corresponding div #results somewhere
 
       // create elements
       const div = document.createElement("div");
