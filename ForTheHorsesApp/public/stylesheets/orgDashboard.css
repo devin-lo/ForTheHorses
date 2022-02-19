@@ -1,0 +1,55 @@
+.listing_bt{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+    float:right;
+  }
+
+  #add_pet{
+    background: green;
+  }
+
+  #edit_pet{
+    background: orange;
+  }
+
+  #remove_pet{
+    background: red;
+  }
+
+  .bocksHeader{
+      float:left;
+      font-size:175%;
+  }
+
+  #orgProfileEditLink{
+      font-size:125%;
+      float:right;
+  }
+
+.dashboard {
+    overflow: hidden;/* Makes this div contain its floats */
+}
+
+.dashboard .listings,
+.dashboard .orgProfile {
+    width: 49%;
+}
+
+.dashboard .listings {
+    float: left;
+}
+
+.dashboard .orgProfile {
+    float: right;
+}
+
+.bocks{
+    border-style: solid;
+}

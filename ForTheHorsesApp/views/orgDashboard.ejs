@@ -4,10 +4,29 @@
  <% include partials/head %>
  <% include partials/menu %>
 <% include partials/script %>
+<link rel="stylesheet" href="./stylesheets/orgDashboard.css">
 </head>
 <body>
     Organization Dashboard. You come here after you login. <br />
     You can see your currently listed pets (like see if ppl are tryna request to adopt). <br />
-    Then you can also add additional pets, or remove pets.
+    Then you can also add additional pets, or remove pets. <br />
+    <div class="dashboard">
+        <div class="bocks listings">
+            <p class="bocksHeader">Your Listings</p><br />
+            <div class="results"></div> <!-- might need to rename it LATER -->
+            <div class="buttons_group">
+                <!-- the first 2 buttons should be greyed out and not able to be selected if no pet is selected -->
+                <div class="listing_bt" id="remove_pet"></div>
+                <div class="listing_bt" id="edit_pet"></div>
+                <!-- the last button should be greyed out if the max # of pets have been added? -->
+                <div class="listing_bt" id="add_pet"></div>
+            </div>
+        </div>
+        <div class="bocks orgProfile">
+            <p class="bocksHeader">Organization Profile</p>
+            <a id="orgProfileEditLink">Edit</a> <!-- don't know how to put the Edit at the right idk -->
+            <div class="orgProfileInfo"></div>
+        </div>
+    </div>
 </body>
 </html>
