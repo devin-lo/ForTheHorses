@@ -1,3 +1,14 @@
+<<<<<<< Updated upstream:ForTheHorsesApp/public/javascripts/userlogin.js
+=======
+//function for login
+
+
+app.use('/js', express.static(__dirname + 'public/js'));
+
+
+
+
+>>>>>>> Stashed changes:ForTheHorsesApp/views/userlogin.js
 var objUser=[{
     username:"ethan",
     password:"test"
