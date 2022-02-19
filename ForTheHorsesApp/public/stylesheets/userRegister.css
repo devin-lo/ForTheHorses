@@ -1,3 +1,52 @@
 #testCSS{
     font-size: x-large;
 }
+
+.userBox {
+    border-style: solid;
+  }
+
+  .userInfo {
+    border-style: double;
+    
+  }
+
+  .two-col {
+    overflow: hidden;/* Makes this div contain its floats */
+}
+
+.two-col .col1,
+.two-col .col2 {
+    width: 49%;
+}
+
+.two-col .col1 {
+    float: left;
+}
+
+.two-col .col2 {
+    float: right;
+}
+
+.two-col label {
+    display: block;
+}
+ 
+.inside {
+    border-style: ridge;
+    align-content: center;
+    margin-right: 40%;
+    margin-left: 40%;
+}
+
+#fence{
+    display: none;
+}
+
+#house:checked ~#fence{
+    display: block;
+}
+
+.insideover {
+    text-indent: 50px;
+}

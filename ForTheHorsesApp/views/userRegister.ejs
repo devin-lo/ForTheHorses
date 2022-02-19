@@ -6,6 +6,133 @@
 <% include partials/script %>
 </head>
 <body>
-    <p id="testCSS">User Register Page</p>
+    <div class="userBox">
+        <h3 id="userRegHeader" class="text-center"><strong>User Registration</strong></h3>
+    </div>
+
+    <div class="userInfo">
+
+
+        <div class="two-col">
+            <div class="col1">
+                <label for="lname"><i class="fa fa-user"></i> First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Jane">
+                </div>
+
+            <div class="col2">
+                <label for="lname"><i class="fa fa-user"></i> Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Doe">
+                </div>
+            </div>
+
+            <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+        <hr>
+
+    <div class="userInfo">
+
+        <div class="inside" style="text-align:center;">
+            <p><strong><u>Current Household Pets</u></strong></p>
+            <form method="post">
+                <div>
+                <input type="checkbox" name="hasDog" id="userHasDog" />
+                <label>Dog(s)</label>
+                </div>
+                <div>
+                <input type="checkbox" name="hasCat" id="userHasCat" />
+                <label for="agree">Cat(s)</label>
+                </div>
+                <div>
+                <input type="checkbox" name="hasOther" id="userHasOther" />
+                <label for="agree">Other(s)</label>
+                </div>
+                </form>
+        </div>
+        <div class="inside" style="text-align:center;">
+            <p><strong><u>Type of Residence</u></strong></p>
+            <form method="post">
+                <div>
+                <input type="radio" name="residence" id="house"/>
+                <label>House</label>
+                <div class="insideover">
+                </div>
+                </div>
+                <div>
+                <input type="radio" name="residence" id="condominium" />
+                <label for="agree">Condominium</label>
+                </div>
+                </form>
+        </div>
+        <div class="inside" style="text-align:center;">
+            <p><strong><u>If in a house, is there fencing?</u></strong></p>
+            <form method="post">
+                <div>
+                <input type="radio" name="residence" id="house"/>
+                <label>Yes</label>
+                <div class="insideover">
+                </div>
+                </div>
+                <div>
+                <input type="radio" name="residence" id="condominium" />
+                <label for="agree">No</label>
+                </div>
+                </form>
+        </div>
+        <div class="inside" style="text-align:center;">
+            <p><strong><u>Past Animal Ownership Experience</u></strong></p>
+            <form method="post">
+                <div>
+                <input type="radio" name="residence" id="house"/>
+                <label>Yes</label>
+                <div class="insideover">
+                </div>
+                </div>
+                <div>
+                <input type="radio" name="residence" id="condominium" />
+                <label for="agree">No</label>
+                </div>
+                </form>
+        </div>
+        <div class="inside" style="text-align:center;">
+            <p><strong><u>Living with Children? Pick all that apply.</u></strong></p>
+            <form method="post">
+                <div>
+                <input type="checkbox" name="residence" id="0-3"/>
+                <label>0-3 years old</label>
+                <div class="insideover">
+                </div>
+                </div>
+                <div>
+                <input type="checkbox" name="residence" id="4-7" />
+                <label for="agree">4-7 years old</label>
+                </div>
+                <div>
+                <input type="checkbox" name="residence" id="8-11" />
+                <label for="agree">8-11 years old</label>
+                </div>
+                <div>
+                <input type="checkbox" name="residence" id="12-17" />
+                 <label for="agree">12-17 years old</label>
+                </div>
+                </form>
+        </div>
+
+    </div>
+
+        <p class="text-center"> By creating an account you agree to our <a href="#">Terms & Policy</a>.</p>
+        <div style="text-align:center;">
+            <button type="submit" class="registerbtn">Register</button>
+        </div>
+
+
+
+    </div>
+
 </body>
 </html>
