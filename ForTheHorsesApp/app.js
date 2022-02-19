@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var aboutRouter = require('./routes/about');
 var contactRouter = require('./routes/contact');
-var browseRouter = require('./routes/browse');
+var petsRouter = require('./routes/pets');
 var usersRouter = require('./routes/users');
 var userLoginRouter = require('./routes/userLogin');
 var orgLoginRouter = require('./routes/orgLogin');
@@ -35,6 +35,7 @@ app.use('/contact', contactRouter);
 app.use('/browse', browseRouter);
 app.use('/orgRegister', orgRegisterRouter);
 app.use('/userRegister', userRegisterRouter);
+app.use('/pets', petsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
